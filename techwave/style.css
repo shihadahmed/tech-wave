@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+.inter-font {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+*{
+    max-width: 1600px;
+    margin: 0 auto;
+    /* background-color: #1A0B2E;  */
+}
+
+/* Shared Color */
+/* background Color */
+.hdr-bg-color{
+   background-color:#1A0B2E;
+}
+
+
+/* Button Animation Style */
+button i {
+    transition: transform 0.3s ease;
+}
+
+button:hover i {
+    transform: translateX(6px);
+}
+
+button:hover {
+    transform: translateY(-2px) scale(1.03); 
+    box-shadow: 0 8px 20px rgba(145, 0, 248, 0.4);
+}
+
+@keyframes glow-pulse {
+    0% { box-shadow: 0 0 10px rgba(247, 233, 63, 0.4); }
+    100% { box-shadow: 0 0 25px rgba(145, 0, 248, 0.6); }
+}
+
+
+
+/* Main Style */
+/* Header Style */
+.main-nav{
+    width: 1200px;
+    display: flex;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid #412567;
+   box-shadow: inset  0px 4px 15px rgba(65, 37, 103, 0.4);
+}
+
+.logo img{
+    width: 219px;
+}
+
+.menu a{
+    color: white;
+    text-decoration: none;
+    margin-right: 30px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+button{
+     background: linear-gradient(106deg,#F7E93F 0%, #FB09B4 50%, #9100F8 100%);
+    width: 150px;
+    border: none;
+    padding: 12px;
+    border-radius: 10000px;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 15px rgba(219, 39, 119, 0.3);
+    animation: glow-pulse 3s infinite alternate;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button a{
+  font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 4px;
+}
+
+/* Banner section */
+
