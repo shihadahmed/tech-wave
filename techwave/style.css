@@ -9,30 +9,37 @@
 }
 
 *{
-    max-width: 1600px;
-    margin: 0 auto;
-    /* background-color: #1A0B2E;  */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    overflow-x: hidden;
+    width: 100%;
 }
 
 /* Shared Color */
-/* background Color */
-.hdr-bg-color{
-   background-color:#1A0B2E;
-}
-
-
 /* Button Animation Style */
-button i {
+button i,
+.btn-spotify i,
+.btn-subscribe i {
     transition: transform 0.3s ease;
 }
 
-button:hover i {
+button:hover i,
+.btn-spotify:hover i,
+.btn-subscribe:hover i {
     transform: translateX(6px);
 }
 
-button:hover {
+button:hover,
+.btn-spotify:hover,
+.btn-subscribe:hover {
     transform: translateY(-2px) scale(1.03); 
     box-shadow: 0 8px 20px rgba(145, 0, 248, 0.4);
+}
+.btn-spotify {
+    animation: glow-pulse 3s infinite alternate;
 }
 
 @keyframes glow-pulse {
@@ -45,47 +52,58 @@ button:hover {
 /* Main Style */
 /* Header Style */
 .main-nav{
-    width: 1200px;
+    width: auto;
+    background-color: #1A0B2E;
+}
+.nav-continar{
+    width: 100%;
+    max-width: 1600px ;
+    margin: 0 auto;
     display: flex;
     padding-top: 30px;
     padding-bottom: 30px;
     align-items: center;
     justify-content: space-between;
     border-bottom: 2px solid #412567;
-   box-shadow: inset  0px 4px 15px rgba(65, 37, 103, 0.4);
+    box-shadow: inset  0px 4px 15px rgba(65, 37, 103, 0);
+
 }
 
 .logo img{
     width: 219px;
+    margin-left: 2rem;
 }
 
 .menu a{
-    color: white;
     text-decoration: none;
     margin-right: 30px;
     font-size: 1rem;
     font-weight: 500;
+    color: white;
 }
 
 button{
-     background: linear-gradient(106deg,#F7E93F 0%, #FB09B4 50%, #9100F8 100%);
+    background: linear-gradient(106deg,#F7E93F 0%, #FB09B4 50%, #9100F8 100%);
     width: 150px;
     border: none;
     padding: 12px;
     border-radius: 10000px;
     transition: all 0.4s ease;
-    box-shadow: 0 4px 15px rgba(219, 39, 119, 0.3);
+    box-shadow: 0 4px 15px rgba(219, 39, 119, 0);
     animation: glow-pulse 3s infinite alternate;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-right: 2rem;
+    
 }
 
 button a{
-  font-size: 1rem;
+    font-size: 1rem;
     font-weight: 600;
     text-decoration: none;
+    background-color: transparent !important;
     color: white;
     display: flex; 
     align-items: center;
@@ -93,6 +111,246 @@ button a{
     text-align: center;
     gap: 4px;
 }
+button a i{
+    background-color: transparent !important;
+    color: white;
+}
+.mobile-menu{
+    display: none;
+}
 
 /* Banner section */
+.banner{
+    height: 780px;
+    background-image: url('../assets/hero-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.icon-section{
+    position: relative;
+    display: inline-block;
+}
+.icon-background{
+    width: 340px;
+    height: 340px;
+    background: linear-gradient(106deg, #F7E93F 0%, #FB09B4 50%, #9100F8 100%);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 10px solid #2A186C;
+}
+.icon-background i {
+    font-size: 200px;
+    color: white;
+}
+.badge {
+    position: absolute;
+    top: 12px; 
+    right: 30px;
+    background-color: #00FF88;
+    color: #1A0B2E;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 18px;
+    z-index: 10;    যেন আইকনের ওপরে থাকে
+}
+.banner-title{
+    font-size: 3.75rem;
+    font-weight: 800;
+    color: white;
+    margin-top: 2.5rem;
+}
+.banner-dis{
+    font-size: 1rem ;
+    color: white;
+    margin-top: .5rem;
+    margin-bottom: 1.5rem ;
+}
+/* Button Group Layout */
+.btn-group {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 
+.btn-spotify {
+    font-size: 1rem;
+    font-weight: 600;
+    background: linear-gradient(90deg, #F7E93F, #FB09B4, #9100F8);
+    color: white;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-subscribe {
+    font-size: 1rem;
+    font-weight: 600;
+    border: 1px solid #00FFB2;
+    color: #00FFB2;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.btn-group i{
+    max-width: 1.0625rem;
+}
+/* About Section */
+.about-section{
+    background-color: #1A0B2E;
+    text-align: center;
+    padding: 3.125rem 12.5rem 9.375rem 12.5rem ;
+}
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.about-title{
+    font-size: 3rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 1rem;
+}
+.about-text{
+    font-size: 1rem;
+    line-height: 2rem;
+    color: white;
+    padding-bottom: 5rem;
+}
+
+.divider {
+    border: 0;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+}
+.card-grid{
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+.about-container {
+    display: block;
+}
+.card-grid {
+    display: inline-block;
+    width: 23%;
+    vertical-align: top;
+}
+.card-number{
+    color: #00FF88;
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+}
+.card-label{
+    color: white;
+    text-transform: uppercase;
+}
+
+/* 1. Small Devices (Up to 576px) */
+@media screen and (max-width: 576px){
+    .nav-continar{
+        width: 100%;
+        display: grid; 
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+        padding: 10px 20px; 
+    }
+
+    .logo{
+        width: 137px;
+
+    }
+
+    .menu, button {
+        display: none; 
+    }
+
+    .mobile-menu {
+        display: block;
+        grid-column: 3;
+        justify-content: end;
+        margin-right: 50px;
+    }
+
+    .mobile-menu i {
+        color: white;
+        font-size: 1.5rem; 
+    }
+    .banner {
+        height: auto;
+        padding: 60px 20px;
+    }
+.icon-background {
+        width: 140px; 
+        height: 140px;
+        border: 5px solid #2A186C;
+    }
+
+    .icon-background i {
+        font-size: 70px;
+    }
+
+    .badge {
+        top: 10px;
+        right: 0px;
+        font-size: 12px;
+        padding: 4px 10px;
+    }
+    .banner-title {
+        font-size: 2.5rem;
+        margin-top: 1.5rem;
+    }
+
+    .banner-dis {
+        font-size: 0.9rem;
+        margin-bottom: 2rem;
+        padding: 0 10px;
+    }
+
+    .btn-spotify, .btn-subscribe {
+        width: 100%; 
+        max-width: 280px;
+        justify-content: center;
+        padding: 12px 20px;
+        font-size: 0.9rem;
+    }
+
+    .btn-group {
+        flex-direction: column; 
+        align-items: center;
+        gap: 15px;
+    }
+
+}
+
+
+/* 2. Medium Devices (576px to 992px) */
+@media screen and (min-width: 576px) and (max-width: 992px){
+
+}
+
+
+/* 3. Large Devices (Above 992px) */
+@media screen and (min-width: 992px){
+
+}
