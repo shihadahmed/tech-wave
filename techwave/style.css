@@ -670,6 +670,22 @@ button a i{
     .features-main-title {
         font-size: 2.2rem;
     }
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+    .episodes-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 20px;
+    }
+    .host-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    .host-socials {
+        justify-content: center;
+    }
  }
 
 
